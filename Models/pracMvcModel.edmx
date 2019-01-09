@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="pracModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="blueMap_Job">
+          <Key>
+            <PropertyRef Name="intID" />
+          </Key>
+          <Property Name="intID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="schoolNo" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CodeNo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="grade" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="Name1" Type="nvarchar" MaxLength="200" />
+          <Property Name="dataCount1" Type="int" />
+          <Property Name="Ratio1" Type="decimal" Precision="15" Scale="10" />
+          <Property Name="Name2" Type="nvarchar" MaxLength="200" />
+          <Property Name="dataCount2" Type="int" />
+          <Property Name="Ratio2" Type="decimal" Precision="15" Scale="10" />
+          <Property Name="Name3" Type="nvarchar" MaxLength="200" />
+          <Property Name="dataCount3" Type="int" />
+          <Property Name="Ratio3" Type="decimal" Precision="15" Scale="10" />
+          <Property Name="Name4" Type="nvarchar" MaxLength="200" />
+          <Property Name="dataCount4" Type="int" />
+          <Property Name="Ratio4" Type="decimal" Precision="15" Scale="10" />
+          <Property Name="type" Type="tinyint" Nullable="false" />
+          <Property Name="sort" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="pracModelStoreContainer">
+          <EntitySet Name="blueMap_Job" EntityType="Self.blueMap_Job" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="pracModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="blueMap_Job">
+          <Key>
+            <PropertyRef Name="intID" />
+          </Key>
+          <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="schoolNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CodeNo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="grade" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="dataCount1" Type="Int32" />
+          <Property Name="Ratio1" Type="Decimal" Precision="15" Scale="10" />
+          <Property Name="Name2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="dataCount2" Type="Int32" />
+          <Property Name="Ratio2" Type="Decimal" Precision="15" Scale="10" />
+          <Property Name="Name3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="dataCount3" Type="Int32" />
+          <Property Name="Ratio3" Type="Decimal" Precision="15" Scale="10" />
+          <Property Name="Name4" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="dataCount4" Type="Int32" />
+          <Property Name="Ratio4" Type="Decimal" Precision="15" Scale="10" />
+          <Property Name="type" Type="Byte" Nullable="false" />
+          <Property Name="sort" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="PUEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="blueMap_Job" EntityType="Self.blueMap_Job" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="pracModelStoreContainer" CdmEntityContainer="PUEntities">
+          <EntitySetMapping Name="blueMap_Job">
+            <EntityTypeMapping TypeName="pracModel.blueMap_Job">
+              <MappingFragment StoreEntitySet="blueMap_Job">
+                <ScalarProperty Name="intID" ColumnName="intID" />
+                <ScalarProperty Name="schoolNo" ColumnName="schoolNo" />
+                <ScalarProperty Name="CodeNo" ColumnName="CodeNo" />
+                <ScalarProperty Name="grade" ColumnName="grade" />
+                <ScalarProperty Name="Name1" ColumnName="Name1" />
+                <ScalarProperty Name="dataCount1" ColumnName="dataCount1" />
+                <ScalarProperty Name="Ratio1" ColumnName="Ratio1" />
+                <ScalarProperty Name="Name2" ColumnName="Name2" />
+                <ScalarProperty Name="dataCount2" ColumnName="dataCount2" />
+                <ScalarProperty Name="Ratio2" ColumnName="Ratio2" />
+                <ScalarProperty Name="Name3" ColumnName="Name3" />
+                <ScalarProperty Name="dataCount3" ColumnName="dataCount3" />
+                <ScalarProperty Name="Ratio3" ColumnName="Ratio3" />
+                <ScalarProperty Name="Name4" ColumnName="Name4" />
+                <ScalarProperty Name="dataCount4" ColumnName="dataCount4" />
+                <ScalarProperty Name="Ratio4" ColumnName="Ratio4" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="sort" ColumnName="sort" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
